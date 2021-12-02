@@ -5,4 +5,4 @@ package protocol
 // For a list of commonly supported extenstions, see §10. Defined Extensions 
 // (https://www.w3.org/TR/webauthn/#sctn-defined-extensions).
 
-type AuthenticationExtensionsClientOutputs map[interface{}]interface{}
+type AuthenticationExtensionsClientOutputs map[string]interface{}

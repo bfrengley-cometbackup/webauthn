@@ -77,7 +77,7 @@ func ParseCredentialRequestResponseBody(body io.Reader) (*ParsedCredentialAssert
 		return nil, ErrBadRequest.WithDetails("CredentialAssertionResponse with bad type")
 	}
 	var par ParsedCredentialAssertionData
-	par.ID, par.RawID, par.Type = car.ID, car.RawID, car.Type
+	par.ID, par.RawID, par.Type, par.Extensions = car.ID, car.RawID, car.Type, car.Extensions
 	par.Raw = car
 
 	par.Response.Signature = car.AssertionResponse.Signature
